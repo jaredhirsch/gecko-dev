@@ -4,7 +4,8 @@
 
 @import url("chrome://global/skin/design-system/tokens-shared.css");
 
-@media not (prefers-contrast) {
+/* This should be @media not (forced-colors), but that doesn't apply in browser chrome */
+@media not ((prefers-contrast) and (-moz-platform: windows)) {
   :root,
   :host(.anonymous-content-host) {
     /* Base */
@@ -22,17 +23,21 @@
     --border-interactive-color: color-mix(in srgb, currentColor 15%, var(--color-gray-60));
 
     /* Button */
-    --button-background-color: var(--button-bgcolor);
-    --button-background-color-hover: var(--button-hover-bgcolor);
-    --button-background-color-active: var(--button-active-bgcolor);
+    --button-background-color: color-mix(in srgb, currentColor 13%, transparent);
+    --button-background-color-hover: color-mix(in srgb, currentColor 17%, transparent);
+    --button-background-color-active: color-mix(in srgb, currentColor 30%, transparent);
+    --button-text-color: currentColor;
+    --button-text-color-primary: AccentColorText;
+
+    --button-background-color-destructive: #e22850;
+    --button-background-color-destructive-hover: #c50042;
+    --button-background-color-destructive-active: #810220;
+    --button-text-color-destructive: #fbfbfe;
 
     /* Color */
-    --color-accent-primary: var(--platform-color-accent);
-    --color-accent-primary-hover: var(--platform-color-accent-hover);
-    --color-accent-primary-active: var(--platform-color-accent-active);
-    --platform-color-accent: var(--button-primary-bgcolor, AccentColor);
-    --platform-color-accent-hover: var(--button-primary-hover-bgcolor);
-    --platform-color-accent-active: var(--button-primary-active-bgcolor);
+    --color-accent-primary: AccentColor;
+    --color-accent-primary-hover: color-mix(in srgb, black 10%, AccentColor);
+    --color-accent-primary-active: color-mix(in srgb, black 20%, AccentColor);
     --color-canvas: Canvas;
 
     /** Font weight **/

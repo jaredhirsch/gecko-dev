@@ -28,8 +28,12 @@
   --color-green-50: #017a40;
   --color-green-80: #004725;
   --color-red-05: #ffe8e8;
+  --color-red-10: #ffbdc5;
+  --color-red-20: #ff9aa2;
   --color-red-30: #f37f98;
   --color-red-50: #d7264c;
+  --color-red-60: #ac1e3d;
+  --color-red-70: #8A1831;
   --color-red-80: #690f22;
   --color-yellow-05: #ffebcd;
   --color-yellow-30: #e49c49;
@@ -41,7 +45,12 @@
   --border-radius-circle: 9999px;
   --border-radius-small: 4px;
   --border-width: 1px;
-  --border-interactive-color: unset;
+
+  /** Link **/
+  /* Not using --focus-outline-offset for links because that's intended for
+  elements with a background, and we only want a slight offset here while not
+  overlapping adjacent text. */
+  --link-focus-outline-offset: 1px;
 
   /** Color **/
   --color-accent-primary: unset;
@@ -60,44 +69,97 @@
   --focus-outline-offset: 2px;
   --focus-outline-width: 2px;
 
+  /** Icon **/
+  --icon-size-default: var(--size-item-small);
+
   /** Input **/
   /*** Button ***/
-  --button-background-color: unset;
-  --button-background-color-hover: unset;
-  --button-background-color-active: unset;
-  --button-border-radius: var(--border-radius-small);
   --button-font-weight: var(--font-weight-bold);
+  --button-font-size: var(--font-size-root);
+  --button-font-size-small: var(--font-size-small);
   --button-line-height: var(--line-height-small);
   --button-min-height: var(--size-item-large);
+  --button-min-height-small: var(--size-item-medium);
+  --button-size-icon: var(--button-min-height);
+  --button-size-icon-small: var(--button-min-height-small);
+  --button-border-radius: var(--border-radius-small);
+  --button-border: 1px solid var(--button-border-color);
+  --button-padding: var(--space-small) var(--space-large);
+  --button-padding-small: var(--space-small) var(--space-large);
+
+  --button-text-color: var(--text-color);
+  --button-text-color-hover: var(--button-text-color);
+  --button-text-color-active: var(--button-text-color);
+  --button-border-color: transparent;
+  --button-border-color-hover: var(--button-border-color);
+  --button-border-color-active: var(--button-border-color);
+  --button-background-color-disabled: var(--button-background-color);
+  --button-opacity-disabled: 0.5;
+
+  --button-background-color-primary: var(--color-accent-primary);
+  --button-background-color-primary-hover: var(--color-accent-primary-hover);
+  --button-background-color-primary-active: var(--color-accent-primary-active);
+  --button-background-color-primary-disabled: var(--button-background-color-primary);
+  --button-text-color-primary-hover: var(--button-text-color-primary);
+  --button-text-color-primary-active: var(--button-text-color-primary);
+  --button-border-color-primary-hover: var(--button-border-color-primary);
+  --button-border-color-primary-active: var(--button-border-color-primary);
+  --button-border-color-primary-disabled: var(--button-border-color-primary);
+
+  --button-text-color-destructive-hover: var(--button-text-color-destructive);
+  --button-text-color-destructive-active: var(--button-text-color-destructive);
+  --button-border-color-destructive-hover: var(--button-border-color-destructive);
+  --button-border-color-destructive-active: var(--button-border-color-destructive);
+
+  --button-background-color-ghost: var(--button-background-color);
+  --button-background-color-ghost-hover: var(--button-background-color-hover);
+  --button-background-color-ghost-active: var(--button-background-color-active);
+  --button-text-color-ghost: var(--button-text-color);
+  --button-text-color-ghost-hover: var(--button-text-color-hover);
+  --button-text-color-ghost-active: var(--button-text-color-active);
+  --button-border-color-ghost: var(--button-border-color);
+  --button-border-color-ghost-hover: var(--button-border-color-hover);
+  --button-border-color-ghost-active: var(--button-border-color-active);
+
+  --menu-button-background-color: var(--button-background-color-ghost);
+  --menu-button-background-color-hover: var(--button-background-color-ghost-hover);
+  --menu-button-background-color-active: var(--button-background-color-ghost-active);
+  --menu-button-text-color: var(--button-text-color-ghost);
+  --menu-button-text-color-hover: var(--button-text-color-ghost-hover);
+  --menu-button-text-color-active: var(--button-text-color-ghost-active);
 
   /*** Text ***/
   --input-text-line-height: var(--button-line-height);
   --input-text-min-height: var(--button-min-height);
-
-  /** Link **/
-  /* Not using --focus-outline-offset for links because that's intended for
-    elements with a background, and we only want a slight offset here while not
-    overlapping adjacent text. */
-  --link-focus-outline-offset: 1px;
 
   /** Text **/
   --text-color-deemphasized: color-mix(in srgb, currentColor 60%, transparent);
 
   /** Size **/
   --size-item-small: 16px;
+  --size-item-medium: 28px;
   --size-item-large: 32px;
+
+  /* Space */
+  --space-small: .25em;
+  /* --space-medium: .45em; *//* Currently unused */
+  --space-large: 1em;
 }
 
 @media not (prefers-contrast) {
   :root,
   :host(.anonymous-content-host) {
+    /* Button */
+    --button-background-color-ghost: transparent;
+    --button-border-color-ghost: transparent;
+
     /* Color */
     --color-background-information: light-dark(var(--color-blue-05), var(--color-blue-80));
     --color-background-success: light-dark(var(--color-green-05), var(--color-green-80));
     --color-background-warning: light-dark(var(--color-yellow-05), var(--color-yellow-80));
     --color-background-critical: light-dark(var(--color-red-05), var(--color-red-80));
 
-    /** Icon **/
+    /* Icon */
     --icon-color: light-dark(var(--color-gray-70), var(--color-gray-05));
     --icon-color-information: light-dark(var(--color-blue-50), var(--color-blue-30));
     --icon-color-success: light-dark(var(--color-green-50), var(--color-green-30));
@@ -109,24 +171,60 @@
 @media (prefers-contrast) {
   :root,
   :host(.anonymous-content-host) {
+    --button-border-color: var(--button-text-color);
+  }
+}
+
+/* This should be @media (forced-colors), but that doesn't apply in browser chrome */
+@media (prefers-contrast) and (-moz-platform: windows) {
+  :root,
+  :host(.anonymous-content-host) {
     /* Border */
     --border-color: var(--text-color);
-    --border-interactive-color: AccentColor;
-    --border-interactive-color-hover: ButtonText;
-    --border-interactive-color-active: AccentColor;
+    --border-interactive-color: ButtonText;
+    --border-interactive-color-hover: SelectedItem;
+    --border-interactive-color-active: ButtonText;
     --border-interactive-color-disabled: GrayText;
 
     /* Button */
-    --button-background-color: ButtonFace;
-    --button-background-color-hover: ButtonFace;
-    --button-background-color-active: ButtonFace;
-    --button-background-color-disabled: GrayText;
+    --button-border-color: var(--border-interactive-color);
+    --button-border-color-hover: var(--border-interactive-color-hover);
+    --button-border-color-active: var(--border-interactive-color-active);
+    --button-border-color-disabled: var(--border-interactive-color-disabled);
 
-    /** Link **/
-    --link-color: LinkText;
-    --link-color-hover: LinkText;
-    --link-color-active: ActiveText;
-    --link-color-visited: var(--link-color);
+    --button-background-color: ButtonFace;
+    --button-background-color-hover: SelectedItemText;
+    --button-background-color-active: SelectedItemText;
+    --button-background-color-disabled: ButtonFace;
+    --button-text-color: ButtonText;
+    --button-text-color-hover: SelectedItem;
+    --button-text-color-active: SelectedItem;
+    --button-text-color-disabled: GrayText;
+    --button-opacity-disabled: 1;
+
+    --button-background-color-primary-disabled: GrayText;
+    --button-border-color-primary: ButtonFace;
+    --button-border-color-primary-hover: SelectedItemText;
+    --button-border-color-primary-active: ButtonText;
+    --button-border-color-primary-disabled: ButtonFace;
+    --button-text-color-primary: ButtonFace;
+    --button-text-color-primary-hover: SelectedItemText;
+    --button-text-color-primary-active: SelectedItemText;
+    --button-text-color-primary-disabled: ButtonFace;
+
+    /* destructive button follows default/secondary button in HCM */
+
+    --menu-button-background-color: var(--button-background-color-ghost);
+    --menu-button-background-color-hover: ButtonText;
+    --menu-button-background-color-active: SelectedItem;
+    --menu-button-text-color: var(--button-text-color-ghost);
+    --menu-button-text-color-hover: ButtonFace;
+    --menu-button-text-color-active: SelectedItemText;
+
+    /* Color */
+    --color-accent-primary: ButtonText;
+    --color-accent-primary-hover: SelectedItem;
+    --color-accent-primary-active: SelectedItem;
 
     /* Color */
     --color-canvas: Canvas;
@@ -134,38 +232,23 @@
     --color-background-success: var(--color-canvas);
     --color-background-warning: var(--color-canvas);
     --color-background-critical: var(--color-canvas);
-    --color-accent-primary: AccentColor;
-    /* FIXME(emilio): These seem rather sketchy */
-    --color-accent-primary-hover: ButtonText;
-    --color-accent-primary-active: ButtonText;
 
-    /** Icon **/
+    /* Icon */
     --icon-color: var(--text-color);
     --icon-color-information: var(--icon-color);
     --icon-color-success: var(--icon-color);
     --icon-color-warning: var(--icon-color);
     --icon-color-critical: var(--icon-color);
 
+    /* Link */
+    --link-color: LinkText;
+    --link-color-hover: LinkText;
+    --link-color-active: ActiveText;
+    --link-color-visited: var(--link-color);
+
+
     /* Text */
     --text-color: CanvasText;
     --text-color-deemphasized: inherit;
-  }
-
-  @media (forced-colors) {
-    /* Applies to Windows HCM only, by default.
-       TODO(emilio): These seem rather sketchy */
-    :root,
-    :host(.anonymous-content-host) {
-      /* Border */
-      --border-interactive-color: ButtonText;
-      --border-interactive-color-hover: SelectedItem;
-      --border-interactive-color-active: ButtonText;
-      --border-interactive-color-disabled: GrayText;
-
-      /* Color */
-      --color-accent-primary: ButtonText;
-      --color-accent-primary-hover: SelectedItem;
-      --color-accent-primary-active: SelectedItem;
-    }
   }
 }
