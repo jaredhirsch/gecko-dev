@@ -1,0 +1,139 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+:host(moz-button) {
+  display: inline-block;
+}
+
+button {
+  appearance: none;
+  min-height: var(--button-min-height);
+  color: var(--button-text-color);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
+  font-weight: var(--button-font-weight);
+  padding: var(--button-padding);
+  /* Ensure font-size isn't overridden by widget styling (e.g. in forms.css) */
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+
+
+  &[size=small] {
+    min-height: var(--button-min-height-small);
+    font-size: var(--button-font-size-small);
+  }
+
+  &:disabled {
+    background-color: var(--button-background-color-disabled);
+    border-color: var(--button-border-color-disabled);
+    color: var(--button-text-color-disabled);
+    opacity: var(--button-opacity-disabled);
+  }
+
+  &:enabled {
+    &:hover {
+      background-color: var(--button-background-color-hover);
+      color: var(--button-text-color-hover);
+      border-color: var(--button-border-color-hover);
+    }
+
+    &:hover:active {
+      background-color: var(--button-background-color-active);
+      color: var(--button-text-color-active);
+      border-color: var(--button-border-color-active);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-outline);
+      outline-offset: var(--focus-outline-offset);
+    }
+  }
+
+  &[type="primary"] {
+    background-color: var(--button-background-color-primary);
+    color: var(--button-text-color-primary);
+    border-color: var(--button-border-color-primary);
+
+    &:disabled {
+      background-color: var(--button-background-color-primary-disabled);
+      border-color: var(--button-border-color-primary-disabled);
+      color: var(--button-text-color-primary-disabled);
+      opacity: var(--button-opacity-primary-disabled);
+    }
+
+    &:enabled {
+      &:hover {
+        background-color: var(--button-background-color-primary-hover);
+        color: var(--button-text-color-primary-hover);
+        border-color: var(--button-border-color-primary-hover);
+      }
+
+      &:hover:active {
+        background-color: var(--button-background-color-primary-active);
+        color: var(--button-text-color-primary-active);
+        border-color: var(--button-border-color-primary-active);
+      }
+    }
+  }
+
+  /* Fallback to default/secondary button styles in HCM */
+  @media not (forced-colors) {
+    &[type="destructive"] {
+      background-color: var(--button-background-color-destructive);
+      color: var(--button-text-color-destructive);
+      border-color: var(--button-border-color-destructive);
+
+      &:enabled {
+        &:hover {
+          background-color: var(--button-background-color-destructive-hover);
+          color: var(--button-text-color-destructive-hover);
+          border-color: var(--button-border-color-destructive-hover);
+        }
+
+        &:hover:active {
+          background-color: var(--button-background-color-destructive-active);
+          color: var(--button-text-color-destructive-active);
+          border-color: var(--button-border-color-destructive-active);
+        }
+      }
+    }
+  }
+
+  &[type~=ghost] {
+    background-color: var(--button-background-color-ghost);
+    color: var(--button-text-color-ghost);
+    border-color: var(--button-border-color-ghost);
+
+    &:enabled {
+      &:hover {
+        background-color: var(--button-background-color-ghost-hover);
+        color: var(--button-text-color-ghost-hover);
+        border-color: var(--button-border-color-ghost-hover);
+      }
+
+      &:hover:active {
+        background-color: var(--button-background-color-ghost-active);
+        color: var(--button-text-color-ghost-active);
+        border-color: var(--button-border-color-ghost-active);
+      }
+    }
+  }
+
+  &[type~=icon] {
+    background-size: var(--icon-size-default);
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-context-properties: fill, stroke;
+    fill: currentColor;
+    stroke: currentColor;
+    width: var(--button-size-icon);
+    height: var(--button-size-icon);
+
+    &[size=small] {
+      width: var(--button-size-icon-small);
+      height: var(--button-size-icon-small);
+    }
+  }
+}

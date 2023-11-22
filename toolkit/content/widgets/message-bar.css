@@ -144,9 +144,9 @@
     --message-bar-background-color: var(--yellow-50);
     --message-bar-text-color: var(--yellow-90);
 
-    --in-content-button-background: var(--yellow-60);
-    --in-content-button-background-hover: var(--yellow-70);
-    --in-content-button-background-active: var(--yellow-80);
+    --button-background-color: var(--yellow-60);
+    --button-background-color-hover: var(--yellow-70);
+    --button-background-color-active: var(--yellow-80);
 
     --close-fill-color: var(--message-bar-text-color);
   }
@@ -158,18 +158,18 @@
     --message-bar-background-color: var(--green-50);
     --message-bar-text-color: var(--green-90);
 
-    --in-content-button-background: var(--green-60);
-    --in-content-button-background-hover: var(--green-70);
-    --in-content-button-background-active: var(--green-80);
+    --button-background-color: var(--green-60);
+    --button-background-color-hover: var(--green-70);
+    --button-background-color-active: var(--green-80);
   }
 
   :host([type=error]) {
     --message-bar-background-color: var(--red-60);
     --message-bar-text-color: #ffffff;
 
-    --in-content-button-background: var(--red-70);
-    --in-content-button-background-hover: var(--red-80);
-    --in-content-button-background-active: var(--red-90);
+    --button-background-color: var(--red-70);
+    --button-background-color-hover: var(--red-80);
+    --button-background-color-active: var(--red-90);
   }
 
   :host([type=info]) .icon {

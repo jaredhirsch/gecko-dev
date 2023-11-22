@@ -88,7 +88,7 @@
 .loading-box {
   box-shadow: none;
   border: none;
-  background: var(--in-content-button-background);
+  background: var(--button-background-color);
   margin-block: 1rem;
 }
 
@@ -105,11 +105,11 @@
 }
 
 .loading-box:nth-child(odd) {
-  background-color: var(--in-content-button-background);
+  background-color: var(--button-background-color);
 }
 
 .loading-box:nth-child(even) {
-  background-color: var(--in-content-button-background-hover);
+  background-color: var(--button-background-color-hover);
 }
 
 @media not (prefers-reduced-motion) {

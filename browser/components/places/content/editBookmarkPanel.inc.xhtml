@@ -46,10 +46,11 @@
         <menuseparator id="editBMPanel_foldersSeparator" hidden="true"/>
       </menupopup>
     </menulist>
-    <button id="editBMPanel_foldersExpander"
-            class="expander-down panel-button"
-            data-l10n-id="bookmark-overlay-folders-expander2"
-            oncommand="gEditItemOverlay.toggleFolderTreeVisibility();"/>
+    <html:moz-button id="editBMPanel_foldersExpander"
+                     class="expander-down panel-button"
+                     data-l10n-id="bookmark-overlay-folders-expander2"
+                     data-l10n-attrs="tooltiptext"
+                     type="icon" />
   </hbox>
 
   <vbox id="editBMPanel_folderTreeRow"
@@ -57,9 +58,10 @@
         hidden="true">
     <!-- editBMPanel_folderTree will go here when this is shown -->
     <hbox id="editBMPanel_newFolderBox">
-      <button data-l10n-id="bookmark-overlay-new-folder-button"
-              id="editBMPanel_newFolderButton"
-              oncommand="gEditItemOverlay.newFolder().catch(Cu.reportError);"/>
+      <html:moz-button data-l10n-id="bookmark-overlay-new-folder-button"
+                       size="small"
+                       data-l10n-attrs="label, accesskey"
+                       id="editBMPanel_newFolderButton" />
     </hbox>
   </vbox>
 

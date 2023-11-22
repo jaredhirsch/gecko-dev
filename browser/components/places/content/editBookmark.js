@@ -256,7 +256,9 @@ var gEditItemOverlay = {
    *   "title", "location", "keyword", "folderPicker".
    */
   async initPanel(aInfo) {
+    window.ensureCustomElements("moz-button");
     const deferred = (this._initPanelDeferred = Promise.withResolvers());
+
     try {
       if (typeof aInfo != "object" || aInfo === null) {
         throw new Error("aInfo must be an object.");
@@ -386,6 +388,8 @@ var gEditItemOverlay = {
           this.handlePlacesEvents
         );
         window.addEventListener("unload", this);
+        this._element("foldersExpander").addEventListener("click", this);
+        this._element("newFolderButton").addEventListener("click", this);
         this._observersAdded = true;
       }
 
@@ -621,6 +625,8 @@ var gEditItemOverlay = {
         this.handlePlacesEvents
       );
       window.removeEventListener("unload", this);
+      this._element("foldersExpander").removeEventListener("click", this);
+      this._element("newFolderButton").removeEventListener("click", this);
       this._observersAdded = false;
     }
 
@@ -1102,6 +1108,10 @@ var gEditItemOverlay = {
     );
   },
 
+  createNewFolder() {
+    this.newFolder().catch(console.error);
+  },
+
   // EventListener
   handleEvent(event) {
     switch (event.type) {
@@ -1128,6 +1138,15 @@ var gEditItemOverlay = {
       case "select":
         this._onFolderListSelected();
         break;
+      case "click":
+        switch (event.target.id) {
+          case "editBMPanel_foldersExpander":
+            this.toggleFolderTreeVisibility();
+            break;
+          case "editBMPanel_newFolderButton":
+            this.newFolder().catch(console.error);
+            break;
+        }
     }
   },
 

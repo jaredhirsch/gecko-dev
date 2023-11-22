@@ -526,11 +526,11 @@
   min-width: auto;
   margin: 0;
   margin-inline-start: 2px;
-  border-width: 0;
   padding: 2px;
   padding-inline-end: 6px;
-  background-color: var(--button-bgcolor);
-  color: var(--button-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: var(--button-border);
   border-radius: 4px;
 }
 
@@ -548,11 +548,15 @@
 }
 
 .permission-popup-permission-remove-button:not(:focus-visible):hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
+  border-color: var(--button-border-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 .permission-popup-permission-remove-button:not(:focus-visible):hover:active {
-  background-color: var(--button-active-bgcolor)
+  background-color: var(--button-background-color-active);
+  border-color: var(--button-border-color-active);
+  color: var(--button-text-color-active);
 }
 
 #protections-popup-cookie-banner-section[hasException] .protections-popup-cookie-banner-switch-on-header,

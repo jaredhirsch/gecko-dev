@@ -32,6 +32,11 @@
   background-color: var(--button-active-bgcolor);
 }
 
+/* Implements editBookmarkPanel resizing on folderTree un-collapse. */
+#editBMPanel_folderTree {
+  min-width: 27em;
+}
+
 #editBookmarkPanel > #editBookmarkHeaderSeparator {
   margin-bottom: 0;
   margin-inline: 16px;
@@ -80,46 +85,17 @@
   opacity: 0.7;
 }
 
-#editBookmarkPanel .expander-up > .button-box > .button-text,
-#editBookmarkPanel .expander-down > .button-box > .button-text {
-  display: none;
-}
-
 #editBookmarkPanel .expander-up,
 #editBookmarkPanel .expander-down {
-  appearance: none; /* override button.css */
-  -moz-context-properties: fill;
-  fill: currentColor;
-  margin: 0;
   margin-inline-start: 4px;
-  min-width: 32px;
-  min-height: 32px;
-  color: var(--button-color);
-  background-color: var(--button-bgcolor);
-  border-radius: 4px;
 }
 
-#editBookmarkPanel .expander-up:hover,
-#editBookmarkPanel .expander-down:hover {
-  background-color: var(--button-hover-bgcolor);
+#editBookmarkPanel .expander-up::part(button) {
+  background-image: url("chrome://global/skin/icons/arrow-up.svg");
 }
 
-#editBookmarkPanel .expander-up:hover:active,
-#editBookmarkPanel .expander-down:hover:active {
-  /**
-   * We override the colour here because on macOS, buttons default to
-   * having :hover:active buttons have color -moz-buttonactivetext
-   */
-  color: var(--button-color);
-  background-color: var(--button-active-bgcolor);
-}
-
-#editBookmarkPanel .expander-up {
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg");
-}
-
-#editBookmarkPanel .expander-down {
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
+#editBookmarkPanel .expander-down::part(button) {
+  background-image: url("chrome://global/skin/icons/arrow-down.svg");
 }
 
 #editBMPanel_folderMenuList {
@@ -139,18 +115,9 @@
 
 /* Focus outlines */
 
-#editBookmarkPanel .expander-up:focus-visible,
-#editBookmarkPanel .expander-down:focus-visible,
-#editBMPanel_newFolderButton:focus-visible {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-outline-offset);
-}
-
 #editBMPanel_folderTree:focus-visible,
 #editBMPanel_tagsSelector:focus-visible,
 #editBookmarkPanelContent > html|input:focus-visible,
 #editBookmarkPanelContent > hbox > html|input:focus-visible {
-  border-color: transparent;
   outline: var(--focus-outline);
-  outline-offset: -1px;
 }

@@ -9,8 +9,8 @@
   --toolbarbutton-outer-padding: 2px;
   --toolbarbutton-inner-padding: 8px;
 
-  --toolbarbutton-hover-background: var(--button-hover-bgcolor);
-  --toolbarbutton-active-background: var(--button-active-bgcolor);
+  --toolbarbutton-hover-background: var(--button-background-color-ghost-hover);
+  --toolbarbutton-active-background: var(--button-background-color-ghost-active);
 
   --toolbarseparator-color: color-mix(in srgb, currentColor 60%, transparent);
 

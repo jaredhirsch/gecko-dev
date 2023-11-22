@@ -37,6 +37,7 @@
   --toolbox-non-lwt-textcolor-inactive: -moz-headerbarinactivetext;
 
   --toolbarbutton-border-radius: 4px;
+  --toolbarbutton-icon-fill-hover: var(--toolbarbutton-icon-fill);
 
   --chrome-content-separator-color: ThreeDShadow;
 
@@ -62,11 +63,20 @@
   --buttons-destructive-active-bgcolor: #810220;
   --buttons-destructive-color: #fbfbfe;
 
+  --checkbox-unchecked-bgcolor: var(--button-background-color);
+  --checkbox-unchecked-hover-bgcolor: var(--button-background-color-hover);
+  --checkbox-unchecked-active-bgcolor: var(--button-background-color-active);
+  --checkbox-checked-border-color: transparent;
+  --checkbox-checked-bgcolor: var(--button-background-color-primary);
+  --checkbox-checked-color: var(--button-text-color-primary);
+  --checkbox-checked-hover-bgcolor: var(--button-background-color-primary-hover);
+  --checkbox-checked-active-bgcolor: var(--button-background-color-primary-active);
+
   --identity-box-margin-inline: 4px;
-  --urlbar-box-bgcolor: var(--button-bgcolor);
-  --urlbar-box-focus-bgcolor: var(--button-bgcolor);
-  --urlbar-box-hover-bgcolor: var(--button-hover-bgcolor);
-  --urlbar-box-active-bgcolor: var(--button-active-bgcolor);
+  --urlbar-box-bgcolor: var(--button-background-color);
+  --urlbar-box-focus-bgcolor: var(--button-background-color);
+  --urlbar-box-hover-bgcolor: var(--button-background-color-hover);
+  --urlbar-box-active-bgcolor: var(--button-background-color-active);
   --urlbar-box-text-color: inherit;
   --urlbar-box-hover-text-color: var(--urlbar-box-text-color);
   --urlbar-min-height: max(32px, 1.4em);

@@ -47,13 +47,13 @@ input.input-field {
   background-image: url("chrome://browser/content/aboutlogins/icons/password-hide.svg");
 }
 
-/** button.reveal-password-button needed to override --in-content-button-background-hover in common-shared.css **/
+/** button.reveal-password-button needed to override --button-background-color-hover in common-shared.css **/
 button.reveal-password-button:hover {
   opacity: 0.6;
   background-color: transparent;
 }
 
-/** button.reveal-password-button needed to override --in-content-button-background-active in common-shared.css **/
+/** button.reveal-password-button needed to override --button-background-color-active in common-shared.css **/
 button.reveal-password-button:hover:active {
   opacity: 1;
   background-color: transparent;
