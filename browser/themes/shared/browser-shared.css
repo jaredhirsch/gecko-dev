@@ -46,34 +46,20 @@
   --short-notification-background: #0250BB;
   --short-notification-gradient: #9059FF;
 
-  --button-bgcolor: color-mix(in srgb, currentColor 13%, transparent);
-  --button-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent);
-  --button-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent);
-  --button-color: currentColor;
-  --button-primary-bgcolor: AccentColor;
-  --button-primary-hover-bgcolor: color-mix(in srgb, black 10%, AccentColor);
-  --button-primary-active-bgcolor: color-mix(in srgb, black 20%, AccentColor);
-  --button-primary-color: AccentColorText;
-
-  --buttons-destructive-bgcolor: #e22850;
-  --buttons-destructive-hover-bgcolor: #c50042;
-  --buttons-destructive-active-bgcolor: #810220;
-  --buttons-destructive-color: #fbfbfe;
-
-  --checkbox-unchecked-bgcolor: var(--button-bgcolor);
-  --checkbox-unchecked-hover-bgcolor: var(--button-hover-bgcolor);
-  --checkbox-unchecked-active-bgcolor: var(--button-active-bgcolor);
+  --checkbox-unchecked-bgcolor: var(--button-background-color);
+  --checkbox-unchecked-hover-bgcolor: var(--button-background-color-hover);
+  --checkbox-unchecked-active-bgcolor: var(--button-background-color-active);
   --checkbox-checked-border-color: transparent;
-  --checkbox-checked-bgcolor: var(--button-primary-bgcolor);
-  --checkbox-checked-color: var(--button-primary-color);
-  --checkbox-checked-hover-bgcolor: var(--button-primary-hover-bgcolor);
-  --checkbox-checked-active-bgcolor: var(--button-primary-active-bgcolor);
+  --checkbox-checked-bgcolor: var(--button-background-color-primary);
+  --checkbox-checked-color: var(--button-text-color-primary);
+  --checkbox-checked-hover-bgcolor: var(--button-background-color-primary-hover);
+  --checkbox-checked-active-bgcolor: var(--button-background-color-primary-active);
 
   --identity-box-margin-inline: 4px;
-  --urlbar-box-bgcolor: var(--button-bgcolor);
-  --urlbar-box-focus-bgcolor: var(--button-bgcolor);
-  --urlbar-box-hover-bgcolor: var(--button-hover-bgcolor);
-  --urlbar-box-active-bgcolor: var(--button-active-bgcolor);
+  --urlbar-box-bgcolor: var(--button-background-color);
+  --urlbar-box-focus-bgcolor: var(--button-background-color);
+  --urlbar-box-hover-bgcolor: var(--button-background-color-hover);
+  --urlbar-box-active-bgcolor: var(--button-background-color-active);
   --urlbar-box-text-color: inherit;
   --urlbar-box-hover-text-color: var(--urlbar-box-text-color);
   --urlbar-min-height: max(32px, 1.4em);

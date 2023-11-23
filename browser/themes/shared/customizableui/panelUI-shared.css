@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 :root {
-  --panel-item-hover-bgcolor: var(--button-hover-bgcolor);
-  --panel-item-active-bgcolor: var(--button-active-bgcolor);
-  --panel-banner-item-color: var(--button-color);
-  --panel-banner-item-background-color: var(--button-bgcolor);
-  --panel-banner-item-hover-bgcolor: var(--button-hover-bgcolor);
-  --panel-banner-item-active-bgcolor: var(--button-active-bgcolor);
+  --panel-item-hover-bgcolor: var(--button-background-color-hover);
+  --panel-item-active-bgcolor: var(--button-background-color-active);
+  --panel-banner-item-color: var(--button-text-color);
+  --panel-banner-item-background-color: var(--button-background-color);
+  --panel-banner-item-hover-bgcolor: var(--button-background-color-hover);
+  --panel-banner-item-active-bgcolor: var(--button-background-color-active);
   --panel-banner-item-update-supported-bgcolor: #2AC3A2;
   --panel-banner-item-info-icon-bgcolor: #0090ED;
 
@@ -647,17 +647,17 @@ toolbarbutton[constrain-size="true"][cui-areatype="panel"] > .toolbarbutton-badg
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2 {
   padding: 6px 12px;
-  background-color: var(--button-bgcolor);
+  background-color: var(--button-background-color);
   font-size: 0.8em;
   font-weight: 600;
 }
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2:active {
-  background-color: var(--button-active-bgcolor);
+  background-color: var(--button-background-color-active);
 }
 
 :root[fxadisabled=true] #appMenu-fxa-status2,
@@ -1043,9 +1043,9 @@ panelview .toolbarbutton-1,
 #appMenu-zoomReduce-button2 > .toolbarbutton-icon,
 #appMenu-zoomEnlarge-button2 > .toolbarbutton-icon {
   -moz-context-properties: fill, stroke;
-  fill: var(--button-color);
+  fill: var(--button-text-color);
   /* the stroke color is used to fill the circle in the icon */
-  stroke: var(--button-bgcolor);
+  stroke: var(--button-background-color);
   border-radius: 50%;
   padding: 0;
 }
@@ -1057,7 +1057,7 @@ panelview .toolbarbutton-1,
 
 #appMenu-fullscreen-button2 > .toolbarbutton-icon {
   padding: 1px;
-  background-color: var(--button-bgcolor);
+  background-color: var(--button-background-color);
 }
 
 #appMenu-zoomReset-button2:not([disabled]):hover > .toolbarbutton-text,
@@ -1425,11 +1425,11 @@ toolbarpaletteitem[place="menu-panel"] > .subviewbutton-nav::after {
 }
 
 .subviewradio:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 .subviewradio:is([selected], [selected]:hover, :hover:active) {
-  background-color: var(--button-active-bgcolor);
+  background-color: var(--button-background-color-active);
 }
 
 radiogroup:focus-visible > .subviewradio[focused="true"] {
@@ -1502,8 +1502,8 @@ radiogroup:focus-visible > .subviewradio[focused="true"] > .radio-label-box {
 
 #PanelUI-panic-view-button {
   appearance: none;
-  background-color: var(--buttons-destructive-bgcolor);
-  color: var(--buttons-destructive-color);
+  background-color: var(--button-background-color-destructive);
+  color: var(--button-text-color-destructive);
   margin: 5px 15px 11px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -1512,11 +1512,11 @@ radiogroup:focus-visible > .subviewradio[focused="true"] > .radio-label-box {
 }
 
 #PanelUI-panic-view-button:hover {
-  background-color: var(--buttons-destructive-hover-bgcolor);
+  background-color: var(--button-background-color-destructive-hover);
 }
 
 #PanelUI-panic-view-button:hover:active {
-  background-color: var(--buttons-destructive-active-bgcolor);
+  background-color: var(--button-background-color-destructive-active);
 }
 
 #PanelUI-panic-view-button:focus-visible {
@@ -1530,8 +1530,8 @@ radiogroup:focus-visible > .subviewradio[focused="true"] > .radio-label-box {
 }
 
 #panic-button-success-closebutton {
-  background-color: var(--button-bgcolor);
-  color: var(--button-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
   margin: 5px 0 0;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -1541,11 +1541,11 @@ radiogroup:focus-visible > .subviewradio[focused="true"] > .radio-label-box {
 }
 
 #panic-button-success-closebutton:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 #panic-button-success-closebutton:hover:active {
-  background-color: var(--button-active-bgcolor);
+  background-color: var(--button-background-color-active);
 }
 
 .panel-header {
@@ -1927,19 +1927,19 @@ panelview:not([mainview]) #PanelUI-whatsNew-title {
 
 .PanelUI-profiler-button {
   appearance: none;
-  background-color: var(--button-bgcolor);
+  background-color: var(--button-background-color);
   border-radius: 4px;
-  color: var(--button-color);
+  color: var(--button-text-color);
   padding: 8px;
   margin: 0 5px;
 }
 
 .PanelUI-profiler-button:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 .PanelUI-profiler-button:hover:active {
-  background-color: var(--button-active-bgcolor);
+  background-color: var(--button-background-color-active);
 }
 
 .PanelUI-profiler-button:focus-visible {
@@ -1948,16 +1948,16 @@ panelview:not([mainview]) #PanelUI-whatsNew-title {
 }
 
 .PanelUI-profiler-button-primary {
-  background-color: var(--button-primary-bgcolor);
-  color: var(--button-primary-color);
+  background-color: var(--button-background-color-primary);
+  color: var(--button-text-color-primary);
 }
 
 .PanelUI-profiler-button-primary:hover {
-  background-color: var(--button-primary-hover-bgcolor);
+  background-color: var(--button-background-color-primary-hover);
 }
 
 .PanelUI-profiler-button-primary:hover:active {
-  background-color: var(--button-primary-active-bgcolor);
+  background-color: var(--button-background-color-primary-active);
 }
 
 .PanelUI-profiler-shortcut {

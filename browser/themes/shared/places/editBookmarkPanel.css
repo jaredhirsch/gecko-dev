@@ -18,8 +18,8 @@
   margin: 0;
   border: 0;
   border-radius: 4px;
-  background-color: var(--button-bgcolor);
-  color: var(--button-color, inherit);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color, inherit);
   font-weight: 600;
   min-width: 0;
   padding: 8px 16px;
@@ -30,11 +30,11 @@
 }
 
 #editBMPanel_newFolderButton:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 #editBMPanel_newFolderButton:hover:active {
-  background-color: var(--button-active-bgcolor);
+  background-color: var(--button-background-color-active);
 }
 
 #editBookmarkPanel > #editBookmarkHeaderSeparator {
@@ -99,14 +99,14 @@
   margin-inline-start: 4px;
   min-width: 32px;
   min-height: 32px;
-  color: var(--button-color);
-  background-color: var(--button-bgcolor);
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
   border-radius: 4px;
 }
 
 #editBookmarkPanel .expander-up:hover,
 #editBookmarkPanel .expander-down:hover {
-  background-color: var(--button-hover-bgcolor);
+  background-color: var(--button-background-color-hover);
 }
 
 #editBookmarkPanel .expander-up:hover:active,
@@ -115,8 +115,8 @@
    * We override the colour here because on macOS, buttons default to
    * having :hover:active buttons have color -moz-buttonactivetext
    */
-  color: var(--button-color);
-  background-color: var(--button-active-bgcolor);
+  color: var(--button-text-color);
+  background-color: var(--button-background-color-active);
 }
 
 #editBookmarkPanel .expander-up {
