@@ -54,13 +54,15 @@ button:-moz-locale-dir(rtl) {
 }
 
 button:enabled:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--menu-button-background-color-hover);
+  color: var(--menu-button-text-color-hover);
+  border-color: var(--menu-button-border-color-hover);
 }
 
 button:enabled:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--menu-button-background-color-active);
+  color: var(--menu-button-text-color-active);
+  border-color: var(--menu-button-border-color-active);
 }
 
 button:focus-visible {

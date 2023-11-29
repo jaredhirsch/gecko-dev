@@ -1881,7 +1881,7 @@ export class FeatureCallout {
         color: "var(--newtab-text-primary-color, var(--in-content-page-color))",
         border:
           "color-mix(in srgb, var(--newtab-background-color-secondary) 80%, #000)",
-        "accent-color": "var(--in-content-primary-button-background)",
+        "accent-color": "var(--button-background-color-primary)",
         "button-background": "color-mix(in srgb, transparent 93%, #000)",
         "button-color":
           "var(--newtab-text-primary-color, var(--in-content-page-color))",
@@ -1895,22 +1895,22 @@ export class FeatureCallout {
           "var(--newtab-text-primary-color, var(--in-content-page-color))",
         "button-border-active": "transparent",
         "primary-button-background":
-          "var(--in-content-primary-button-background)",
-        "primary-button-color": "var(--in-content-primary-button-text-color)",
+          "var(--button-background-color-primary)",
+        "primary-button-color": "var(--button-text-color-primary)",
         "primary-button-border":
-          "var(--in-content-primary-button-border-color)",
+          "var(--button-border-color-primary)",
         "primary-button-background-hover":
-          "var(--in-content-primary-button-background-hover)",
+          "var(--button-background-color-primary-hover)",
         "primary-button-color-hover":
-          "var(--in-content-primary-button-text-color-hover)",
+          "var(--button-text-color-primary-hover)",
         "primary-button-border-hover":
-          "var(--in-content-primary-button-border-hover)",
+          "var(--button-border-color-primary-hover)",
         "primary-button-background-active":
-          "var(--in-content-primary-button-background-active)",
+          "var(--button-background-color-primary-active)",
         "primary-button-color-active":
-          "var(--in-content-primary-button-text-color-active)",
+          "var(--button-text-color-primary-active)",
         "primary-button-border-active":
-          "var(--in-content-primary-button-border-active)",
+          "var(--button-border-color-primary-active)",
         "link-color": "LinkText",
         "link-color-hover": "LinkText",
         "link-color-active": "ActiveText",

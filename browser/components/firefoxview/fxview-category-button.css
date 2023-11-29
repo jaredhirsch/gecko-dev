@@ -8,7 +8,7 @@
 
 button {
   background-color: initial;
-  border: 1px solid var(--in-content-primary-button-border-color);
+  border: 1px solid var(--button-border-color-primary);
   -moz-context-properties: fill, fill-opacity;
   fill: currentColor;
   display: grid;
@@ -38,8 +38,8 @@ button:hover {
 
   button:hover,
   button[selected]:hover {
-    background-color: var(--in-content-button-background-hover);
-    border-color: var(--in-content-button-border-color-hover);
+    background-color: var(--button-background-color-hover);
+    border-color: var(--button-border-color-hover);
   }
 
   button[selected]:hover {
@@ -90,7 +90,7 @@ button[selected]:focus-visible {
   button {
     transition: none;
     border-color: ButtonText;
-    background-color: var(--in-content-button-background);
+    background-color: var(--button-background-color);
   }
 
   button:hover {

@@ -64,7 +64,7 @@
 
 .info {
   -moz-context-properties: fill;
-  fill: var(--in-content-primary-button-background);
+  fill: var(--button-background-color-primary);
 }
 
 .description {

@@ -38,9 +38,9 @@
   --newtab-background-color-secondary: #FFF;
 
   /* ensure utility button hover states match those of the rest of the page */
-  --in-content-button-background-hover: var(--fxview-element-background-hover);
-  --in-content-button-background-active: var(--fxview-element-background-active);
-  --in-content-button-text-color-hover: var(--fxview-text-color-hover);
+  --button-background-color-hover: var(--fxview-element-background-hover);
+  --button-background-color-active: var(--fxview-element-background-active);
+  --button-text-color-hover: var(--fxview-text-color-hover);
 }
 
 body {
@@ -580,8 +580,8 @@ details[open] > .page-section-header > .twisty {
 }
 
 .closed-tab-li-dismiss:hover {
-  background-color: var(--in-content-button-background-hover);
-  fill: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  fill: var(--button-text-color-hover);
 }
 
 .synced-tab-a,

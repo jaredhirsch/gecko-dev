@@ -113,7 +113,7 @@ a {
 }
 
 .pager > .current {
-  background-color: var(--in-content-primary-button-background);
+  background-color: var(--button-background-color-primary);
 }
 
 #introduction-section .logo {
@@ -212,7 +212,7 @@ a {
 }
 
 #main-section .option.selected {
-  border-color: var(--in-content-primary-button-background);
+  border-color: var(--button-background-color-primary);
 }
 
 #main-section .option.accept {

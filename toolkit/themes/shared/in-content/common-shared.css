@@ -20,41 +20,19 @@
   --in-content-box-background-odd: rgba(12, 12, 13, 0.05); /* grey 90 a05 */
   --in-content-box-border-color: color-mix(in srgb, currentColor 41%, transparent);
   --in-content-box-info-background: #f0f0f4;
-  --in-content-item-hover: color-mix(in srgb, var(--in-content-primary-button-background) 20%, transparent);
+  --in-content-item-hover: color-mix(in srgb, var(--button-background-color-primary) 20%, transparent);
   --in-content-item-hover-text: var(--in-content-page-color);
-  --in-content-item-selected: var(--in-content-primary-button-background);
-  --in-content-item-selected-text: var(--in-content-primary-button-text-color);
+  --in-content-item-selected: var(--button-background-color-primary);
+  --in-content-item-selected-text: var(--button-text-color-primary);
   --in-content-icon-color: rgb(91,91,102);
-  --in-content-accent-color: var(--in-content-primary-button-background);
-  --in-content-accent-color-active: var(--in-content-primary-button-background-hover);
+  --in-content-accent-color: var(--button-background-color-primary);
+  --in-content-accent-color-active: var(--button-background-color-primary-hover);
   --in-content-border-hover: var(--grey-90-a50);
   --in-content-border-invalid: var(--red-50);
   --in-content-border-color: #d7d7db;
   --in-content-error-text-color: #c50042;
   --in-content-warning-icon-color: #ffa436;
   --in-content-success-icon-color: #2ac3a2;
-  --in-content-button-text-color: var(--in-content-text-color);
-  --in-content-button-text-color-hover: var(--in-content-text-color);
-  --in-content-button-text-color-active: var(--in-content-button-text-color-hover);
-   /* button background states are also used for checkboxes and radiobuttons */
-  --in-content-button-background: color-mix(in srgb, currentColor 7%, transparent);
-  --in-content-button-background-hover: color-mix(in srgb, currentColor 14%, transparent);
-  --in-content-button-background-active: color-mix(in srgb, currentColor 21%, transparent);
-  --in-content-button-border-color: transparent;
-  --in-content-button-border-color-hover: transparent;
-  --in-content-button-border-color-active: var(--in-content-button-border-color-hover);
-  --in-content-primary-button-text-color: rgb(251,251,254);
-  --in-content-primary-button-text-color-hover: var(--in-content-primary-button-text-color);
-  --in-content-primary-button-text-color-active: var(--in-content-primary-button-text-color);
-  --in-content-primary-button-background: #0061e0;
-  --in-content-primary-button-background-hover: #0250bb;
-  --in-content-primary-button-background-active: #053e94;
-  --in-content-primary-button-border-color: transparent;
-  --in-content-primary-button-border-hover: transparent;
-  --in-content-primary-button-border-active: transparent;
-  --in-content-danger-button-background: #e22850;
-  --in-content-danger-button-background-hover: #c50042;
-  --in-content-danger-button-background-active: #810220;
   --in-content-focus-outline-color: var(--focus-outline-color);
   --in-content-focus-outline-width: var(--focus-outline-width);
   --in-content-focus-outline-offset: var(--focus-outline-offset);
@@ -63,21 +41,21 @@
 
   --in-content-table-background: #f8f8fa;
   --in-content-table-border-color: var(--in-content-box-border-color);
-  --in-content-table-header-background: var(--in-content-primary-button-background);
-  --in-content-table-header-color: var(--in-content-primary-button-text-color);
+  --in-content-table-header-background: var(--button-background-color-primary);
+  --in-content-table-header-color: var(--button-text-color-primary);
   --in-content-sidebar-width: 240px;
 
   --dialog-warning-text-color: var(--red-60);
 
   --checkbox-border-color: var(--in-content-box-border-color);
-  --checkbox-unchecked-bgcolor: var(--in-content-button-background);
-  --checkbox-unchecked-hover-bgcolor: var(--in-content-button-background-hover);
-  --checkbox-unchecked-active-bgcolor: var(--in-content-button-background-active);
-  --checkbox-checked-bgcolor: var(--in-content-primary-button-background);
-  --checkbox-checked-color: var(--in-content-primary-button-text-color);
+  --checkbox-unchecked-bgcolor: var(--button-background-color);
+  --checkbox-unchecked-hover-bgcolor: var(--button-background-color-hover);
+  --checkbox-unchecked-active-bgcolor: var(--button-background-color-active);
+  --checkbox-checked-bgcolor: var(--button-background-color-primary);
+  --checkbox-checked-color: var(--button-text-color-primary);
   --checkbox-checked-border-color: transparent;
-  --checkbox-checked-hover-bgcolor: var(--in-content-primary-button-background-hover);
-  --checkbox-checked-active-bgcolor: var(--in-content-primary-button-background-active);
+  --checkbox-checked-hover-bgcolor: var(--button-background-color-primary-hover);
+  --checkbox-checked-active-bgcolor: var(--button-background-color-primary-active);
 
   --blue-40: #45a1ff;
   --blue-50: #0a84ff;
@@ -150,15 +128,6 @@
 
     --in-content-icon-color: rgb(251,251,254);
 
-    --in-content-primary-button-text-color: rgb(43,42,51);
-    --in-content-primary-button-background: rgb(0,221,255);
-    --in-content-primary-button-background-hover: rgb(128,235,255);
-    --in-content-primary-button-background-active: rgb(170,242,255);
-
-    --in-content-danger-button-background: #ff848b;
-    --in-content-danger-button-background-hover: #ffbdc5;
-    --in-content-danger-button-background-active: #ffdfe7;
-
     --in-content-table-background: rgb(35, 34, 43);
 
     --card-outline-color: var(--grey-60);
@@ -204,30 +173,6 @@
      * change... */
     --in-content-border-invalid: ThreeDShadow;
     --in-content-border-color: ThreeDShadow;
-
-    --in-content-button-text-color: ButtonText;
-    --in-content-button-text-color-hover: SelectedItemText;
-    --in-content-button-text-color-active: SelectedItem;
-    --in-content-button-background: ButtonFace;
-    --in-content-button-background-hover: SelectedItem;
-    --in-content-button-background-active: SelectedItemText;
-    --in-content-button-border-color: ButtonText;
-    --in-content-button-border-color-hover: SelectedItemText;
-    --in-content-button-border-color-active: SelectedItem;
-
-    --in-content-primary-button-text-color: ButtonFace;
-    --in-content-primary-button-text-color-hover: SelectedItemText;
-    --in-content-primary-button-text-color-active: SelectedItem;
-    --in-content-primary-button-background: ButtonText;
-    --in-content-primary-button-background-hover: SelectedItem;
-    --in-content-primary-button-background-active: SelectedItemText;
-    --in-content-primary-button-border-color: ButtonFace;
-    --in-content-primary-button-border-hover: SelectedItemText;
-    --in-content-primary-button-border-active: SelectedItem;
-
-    --in-content-danger-button-background: var(--in-content-primary-button-background);
-    --in-content-danger-button-background-hover: var(--in-content-primary-button-background-hover);
-    --in-content-danger-button-background-active: var(--in-content-primary-button-background-active);
 
     --in-content-focus-outline-color: -moz-DialogText;
 
@@ -307,13 +252,13 @@ xul|tab {
 
 xul|tab:where(:hover) {
   border-bottom-color: var(--in-content-border-color);
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 xul|tab:where(:hover:active) {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 xul|tab[selected] {
@@ -322,11 +267,11 @@ xul|tab[selected] {
 }
 
 xul|tab[selected]:hover {
-  background-color: var(--in-content-button-background-hover);
+  background-color: var(--button-background-color-hover);
 }
 
 xul|tab[selected]:hover:active {
-  background-color: var(--in-content-button-background-active);
+  background-color: var(--button-background-color-active);
 }
 
 @media (prefers-contrast) {
@@ -336,11 +281,11 @@ xul|tab[selected]:hover:active {
   }
 
   xul|tab[selected]:hover {
-    color: var(--in-content-button-text-color-hover);
+    color: var(--button-text-color-hover);
   }
 
   xul|tab[selected]:hover:active {
-    color: var(--in-content-button-text-color-active);
+    color: var(--button-text-color-active);
   }
 }
 
@@ -359,10 +304,10 @@ html|input[type="color"],
 xul|menulist {
   appearance: none;
   min-height: var(--button-min-height);
-  color: var(--in-content-button-text-color);
-  border: 1px solid var(--in-content-button-border-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
   border-radius: 4px;
-  background-color: var(--in-content-button-background);
+  background-color: var(--button-background-color);
   font-weight: 400;
   line-height: var(--button-line-height);
   padding: .45em 1em;
@@ -458,9 +403,9 @@ html|select:not([size], [multiple]):enabled:hover,
 html|input[type="color"]:hover,
 xul|button:not([disabled="true"]):hover,
 xul|menulist:not([disabled="true"]):hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
-  border-color: var(--in-content-button-border-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
+  border-color: var(--button-border-color-hover);
 }
 
 html|button:enabled:hover:active,
@@ -470,9 +415,9 @@ xul|button:not([disabled="true"]):hover:active,
 xul|button[open],
 xul|button[open]:hover,
 xul|menulist[open="true"]:not([disabled="true"]) {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
-  border-color: var(--in-content-button-border-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
+  border-color: var(--button-border-color-active);
 }
 
 html|button:disabled,
@@ -487,9 +432,9 @@ html|button[autofocus],
 html|button[type="submit"],
 xul|button[default],
 button.primary {
-  background-color: var(--in-content-primary-button-background);
-  color: var(--in-content-primary-button-text-color);
-  border-color: var(--in-content-primary-button-border-color);
+  background-color: var(--button-background-color-primary);
+  color: var(--button-text-color-primary);
+  border-color: var(--button-border-color-primary);
 }
 
 html|button[autofocus]:enabled:hover,
@@ -497,9 +442,9 @@ html|button[type="submit"]:enabled:hover,
 html|button.primary:enabled:hover,
 xul|button[default]:not([disabled="true"]):hover,
 xul|button.primary:not([disabled="true"]):hover {
-  background-color: var(--in-content-primary-button-background-hover);
-  color: var(--in-content-primary-button-text-color-hover);
-  border-color: var(--in-content-primary-button-border-hover);
+  background-color: var(--button-background-color-primary-hover);
+  color: var(--button-text-color-primary-hover);
+  border-color: var(--button-border-color-primary-hover);
 }
 
 html|button[autofocus]:enabled:hover:active,
@@ -507,9 +452,9 @@ html|button[type="submit"]:enabled:hover:active,
 html|button.primary:enabled:hover:active,
 xul|button[default]:not([disabled="true"]):hover:active,
 xul|button.primary:not([disabled="true"]):hover:active {
-  background-color: var(--in-content-primary-button-background-active);
-  color: var(--in-content-primary-button-text-color-active);
-  border-color: var(--in-content-primary-button-border-active);
+  background-color: var(--button-background-color-primary-active);
+  color: var(--button-text-color-primary-active);
+  border-color: var(--button-border-color-primary-active);
 }
 
 @media not (prefers-contrast) {
@@ -527,10 +472,10 @@ xul|button.primary:not([disabled="true"]):hover:active {
 }
 
 .danger-button {
-  --in-content-primary-button-background: var(--in-content-danger-button-background);
-  --in-content-primary-button-background-hover: var(--in-content-danger-button-background-hover);
-  --in-content-primary-button-background-active: var(--in-content-danger-button-background-active);
-  --in-content-focus-outline-color: var(--in-content-danger-button-background);
+  --button-background-color-primary: var(--button-background-color-destructive);
+  --button-background-color-primary-hover: var(--button-background-color-destructive-hover);
+  --button-background-color-primary-active: var(--button-background-color-destructive-active);
+  --in-content-focus-outline-color: var(--button-background-color-destructive);
 }
 
 @media not (prefers-contrast) {
@@ -540,13 +485,13 @@ xul|button.primary:not([disabled="true"]):hover:active {
 }
 
 html|button.ghost-button:not(.semi-transparent):enabled:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 html|button.ghost-button:not(.semi-transparent):enabled:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 html|button.ghost-button.icon-button {
@@ -807,7 +752,7 @@ xul|*.radio-check {
   border-radius: 100%;
   margin-block: 2px; /* extend the vertical clicktarget */
   margin-inline: 0 6px;
-  background-color: var(--in-content-button-background);
+  background-color: var(--button-background-color);
   background-position: center;
   flex-shrink: 0; /* avoid shrinking inside flex container */
 }
@@ -815,40 +760,40 @@ xul|*.radio-check {
 @media (prefers-contrast) {
   html|input[type="radio"],
   xul|*.radio-check {
-    border-color: var(--in-content-button-border-color);
+    border-color: var(--button-border-color);
   }
 
   html|input[type="radio"]:enabled:hover,
   xul|radio:not([disabled="true"]):hover > xul|*.radio-check {
-    border-color: var(--in-content-button-border-color-hover);
+    border-color: var(--button-border-color-hover);
   }
 
   html|input[type="radio"]:enabled:hover:active,
   xul|radio:not([disabled="true"]):hover:active > xul|*.radio-check {
-    border-color: var(--in-content-button-border-color-active);
+    border-color: var(--button-border-color-active);
   }
 }
 
 html|input[type="radio"]:enabled:hover,
 xul|radio:not([disabled="true"]):hover > xul|*.radio-check {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 html|input[type="radio"]:enabled:hover:active,
 xul|radio:not([disabled="true"]):hover:active > xul|*.radio-check {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 html|input[type="radio"]:checked,
 xul|*.radio-check[selected] {
   -moz-context-properties: fill;
   fill: currentColor;
-  color: var(--in-content-primary-button-text-color);
-  background-color: var(--in-content-primary-button-background);
+  color: var(--button-text-color-primary);
+  background-color: var(--button-background-color-primary);
   background-image: url("chrome://global/skin/icons/radio.svg");
-  border-color: var(--in-content-primary-button-border-color);
+  border-color: var(--button-border-color-primary);
 
   /* Style the button also when printing with "Print Backgrounds" unchecked */
   color-adjust: exact;
@@ -856,16 +801,16 @@ xul|*.radio-check[selected] {
 
 html|input[type="radio"]:enabled:checked:hover,
 xul|radio:not([disabled="true"])[selected]:hover > xul|*.radio-check {
-  background-color: var(--in-content-primary-button-background-hover);
-  color: var(--in-content-primary-button-text-color-hover);
-  border-color: var(--in-content-primary-button-border-hover);
+  background-color: var(--button-background-color-primary-hover);
+  color: var(--button-text-color-primary-hover);
+  border-color: var(--button-border-color-primary-hover);
 }
 
 html|input[type="radio"]:enabled:checked:hover:active,
 xul|radio:not([disabled="true"])[selected]:hover:active > xul|*.radio-check {
-  background-color: var(--in-content-primary-button-background-active);
-  color: var(--in-content-primary-button-text-color-active);
-  border-color: var(--in-content-primary-button-border-active);
+  background-color: var(--button-background-color-primary-active);
+  color: var(--button-text-color-primary-active);
+  border-color: var(--button-border-color-primary-active);
 }
 
 xul|*.radio-label-box {
@@ -912,7 +857,7 @@ html|*#categories {
 }
 
 #categories > .category {
-  border: 1px solid var(--in-content-primary-button-border-color);
+  border: 1px solid var(--button-border-color-primary);
   border-radius: 4px;
   min-height: 48px;
   appearance: none;
@@ -923,7 +868,7 @@ html|*#categories {
 }
 
 html|*#categories > html|*.category {
-  border: 1px solid var(--in-content-primary-button-border-color);
+  border: 1px solid var(--button-border-color-primary);
   background-color: initial;
   background-size: 24px;
   background-repeat: no-repeat;
@@ -942,15 +887,15 @@ html|*#categories > html|*.category:dir(rtl) {
 }
 
 #categories > .category:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
-  border-color: var(--in-content-button-border-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
+  border-color: var(--button-border-color-hover);
 }
 
 #categories > .category:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
-  border-color: var(--in-content-button-border-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
+  border-color: var(--button-border-color-active);
 }
 
 @media not (prefers-contrast) {
@@ -982,9 +927,9 @@ html|*#categories > html|*.category:dir(rtl) {
 
   #categories > .category[selected],
   #categories > .category.selected {
-    background-color: var(--in-content-button-background-hover);
-    color: var(--in-content-button-text-color-hover);
-    border-color: var(--in-content-button-border-color-hover);
+    background-color: SelectedItem;
+    color: SelectedItemText;
+    border-color: SelectedItemText;
   }
 }
 
@@ -1121,12 +1066,12 @@ xul|treechildren::-moz-tree-row(selected) {
 @media not (prefers-contrast) {
   xul|richlistbox:not(#categories) > xul|richlistitem[selected] {
     /* Ensure buttons/menulists inside richlistitems (containers, applications) look OK */
-    --in-content-button-background: color-mix(in srgb, currentColor 15%, transparent);
-    --in-content-button-background-hover: color-mix(in srgb, currentColor 30%, transparent);
-    --in-content-button-background-active: color-mix(in srgb, currentColor 45%, transparent);
-    --in-content-button-text-color: var(--in-content-item-selected-text);
-    --in-content-button-text-color-hover: var(--in-content-item-selected-text);
-    --in-content-button-text-color-active: var(--in-content-button-text-color-hover);
+    --button-background-color: color-mix(in srgb, currentColor 15%, transparent);
+    --button-background-color-hover: color-mix(in srgb, currentColor 30%, transparent);
+    --button-background-color-active: color-mix(in srgb, currentColor 45%, transparent);
+    --button-text-color: var(--in-content-item-selected-text);
+    --button-text-color-hover: var(--in-content-item-selected-text);
+    --button-text-color-active: var(--button-text-color-hover);
     --in-content-focus-outline-color: var(--in-content-item-selected-text);
   }
 }
@@ -1177,21 +1122,21 @@ xul|treecol:not([hideheader="true"]),
   appearance: none;
   border: none;
   border-radius: unset;
-  background-color: var(--in-content-button-background);
-  color: var(--in-content-button-text-color, inherit);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color, inherit);
   padding: 5px 10px;
 }
 
 xul|treecol:not([hideheader="true"], [sortable="false"]):hover,
 .tree-columnpicker-button:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 xul|treecol:not([hideheader="true"], [sortable="false"]):hover:active,
 .tree-columnpicker-button:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 xul|treecol:not([hideheader="true"], :first-child),
@@ -1204,7 +1149,7 @@ xul|treecol:not([hideheader="true"], :first-child),
 @media (prefers-contrast) {
   xul|treecol:not([hideheader="true"], :first-child),
   xul|treecolpicker {
-    --in-content-box-border-color: var(--in-content-button-border-color);
+    --in-content-box-border-color: var(--button-border-color);
   }
 }
 
@@ -1340,7 +1285,7 @@ input[type="text"][warning]:enabled:not(:focus) {
 .sidebar-footer-link {
   height: 36px;
   cursor: default;
-  border: 1px solid var(--in-content-button-border-color);
+  border: 1px solid var(--button-border-color);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -1367,15 +1312,15 @@ xul|*.sidebar-footer-link {
 }
 
 .sidebar-footer-link:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
-  border-color: var(--in-content-button-border-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
+  border-color: var(--button-border-color-hover);
 }
 
 .sidebar-footer-link:hover:active:not([disabled]) {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
-  border-color: var(--in-content-button-border-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
+  border-color: var(--button-border-color-active);
 }
 
 .sidebar-footer-link:focus-visible {

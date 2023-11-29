@@ -57,7 +57,7 @@ tr {
 th {
   font-weight: normal;
   text-align: start;
-  background-color: var(--in-content-button-background);
+  background-color: var(--button-background-color);
 }
 th:not(:first-child) {
   border-inline-start: 1px solid;
@@ -99,13 +99,13 @@ td:first-child {
   fill: currentColor;
 }
 .profiler-icon:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 .profiler-icon:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
   fill-opacity: 1;
 }
 
@@ -197,12 +197,12 @@ tr[selected] > td {
 }
 
 th.clickable:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 th.clickable:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 tr.process > td.type {
@@ -235,13 +235,13 @@ tr:is([selected], :hover):not(.killing) > .close-icon {
 }
 
 .close-icon:hover {
-  background-color: var(--in-content-button-background-hover);
-  color: var(--in-content-button-text-color-hover);
+  background-color: var(--button-background-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 .close-icon:hover:active {
-  background-color: var(--in-content-button-background-active);
-  color: var(--in-content-button-text-color-active);
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
 }
 
 /* column-name */
