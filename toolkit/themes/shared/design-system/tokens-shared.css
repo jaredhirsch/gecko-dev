@@ -233,6 +233,8 @@
     --color-background-warning: var(--color-canvas);
     --color-background-critical: var(--color-canvas);
 
+    --focus-outline-color: CanvasText;
+
     /* Icon */
     --icon-color: var(--text-color);
     --icon-color-information: var(--icon-color);
