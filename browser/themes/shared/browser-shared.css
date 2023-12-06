@@ -36,6 +36,7 @@
   --toolbox-non-lwt-textcolor-inactive: -moz-headerbarinactivetext;
 
   --toolbarbutton-border-radius: 4px;
+  --toolbarbutton-icon-fill-hover: var(--toolbarbutton-icon-fill);
 
   --chrome-content-separator-color: ThreeDShadow;
 

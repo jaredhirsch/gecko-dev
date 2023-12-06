@@ -6,7 +6,7 @@
 
 /* This should be @media not (forced-colors), but that doesn't apply in browser chrome */
 @media not ((prefers-contrast) and (-moz-platform: windows)) {
-  :root,
+  :root:not(:-moz-lwtheme),
   :host(.anonymous-content-host) {
     /* Base */
     /* Do not use base tokens directly as they don't carry any meaning and are used to set our base. Refer to Application tokens below. */
@@ -28,6 +28,9 @@
     --button-background-color-active: color-mix(in srgb, currentColor 30%, transparent);
     --button-text-color: currentColor;
     --button-text-color-primary: AccentColorText;
+
+    /* Fix menu background color in macOS increase contrast */
+    --menu-button-background-color: transparent;
 
     --button-background-color-destructive: #e22850;
     --button-background-color-destructive-hover: #c50042;

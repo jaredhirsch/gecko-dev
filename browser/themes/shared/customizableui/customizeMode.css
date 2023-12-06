@@ -263,10 +263,14 @@ toolbarpaletteitem > #search-container > #searchbar > .searchbar-textbox {
 
 .customization-uidensity-menuitem:is(:hover, :focus-visible) {
   background-color: var(--button-background-color-hover);
+  border-color: var(--button-border-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 .customization-uidensity-menuitem:is(:hover:active, [active="true"]) {
   background-color: var(--button-background-color-active);
+  border-color: var(--button-border-color-active);
+  color: var(--button-text-color-active);
 }
 
 .customization-uidensity-menuitem > .menu-iconic-text {

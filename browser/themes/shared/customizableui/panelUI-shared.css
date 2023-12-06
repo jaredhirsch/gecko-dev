@@ -191,10 +191,12 @@ toolbarseparator + .panel-subview-body {
 
 .panel-info-button {
   appearance: none;
-  color: inherit;
   padding: 0;
   border-radius: var(--toolbarbutton-border-radius);
   flex-shrink: 0;
+  background-color: var(--button-background-color-ghost);
+  border: var(--button-border);
+  color: var(--button-text-color-ghost);
 }
 
 .panel-info-button[disabled=true] {
@@ -202,12 +204,16 @@ toolbarseparator + .panel-subview-body {
 }
 
 .panel-info-button:hover {
-  background-color: var(--panel-item-hover-bgcolor);
+  background-color: var(--button-background-color-ghost-hover);
+  border-color: var(--button-border-color-ghost-hover);
+  color: var(--button-text-color-ghost-hover);
 }
 
 .panel-info-button:not(:hover)[checked],
 .panel-info-button:hover:active {
-  background-color: var(--panel-item-active-bgcolor);
+  background-color: var(--button-background-color-ghost-hover);
+  border-color: var(--button-border-color-ghost-active);
+  color: var(--button-text-color-ghost-active);
 }
 
 .panel-info-button:focus-visible {
@@ -642,22 +648,29 @@ toolbarbutton[constrain-size="true"][cui-areatype="panel"] > .toolbarbutton-badg
 
 #appMenu-fxa-status2[fxastatus] > #appMenu-fxa-label2 > vbox > #appMenu-header-description,
 #appMenu-fxa-text {
-  font-weight: 600;
+  font-weight: var(--button-font-weight);
 }
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2 {
-  padding: 6px 12px;
+  padding: var(--button-padding-small);
   background-color: var(--button-background-color);
-  font-size: 0.8em;
-  font-weight: 600;
+  border: var(--button-border);
+  color: var(--button-text-color);
+  font-size: var(--button-font-size-small);
+  font-weight: var(--button-font-weight);
+  min-height: var(--button-min-height-small);
 }
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2:hover {
   background-color: var(--button-background-color-hover);
+  border-color: var(--button-border-color-hover);
+  color: var(--button-text-color-hover);
 }
 
 #appMenu-fxa-status2:not([fxastatus]) > #appMenu-fxa-label2:active {
   background-color: var(--button-background-color-active);
+  border-color: var(--button-border-color-active);
+  color: var(--button-text-color-active);
 }
 
 :root[fxadisabled=true] #appMenu-fxa-status2,
@@ -1232,6 +1245,19 @@ panelview .toolbarbutton-1 {
     :not([cui-areatype="toolbar"]),
     [overflowedItem=true]
   ) > toolbarbutton
+):not([disabled]) {
+  background-color: var(--menu-button-background-color);
+  color: var(--menu-button-text-color);
+}
+
+:is(
+  panelview .toolbarbutton-1,
+  toolbarbutton.subviewbutton,
+  .widget-overflow-list .toolbarbutton-1,
+  .toolbaritem-combined-buttons:is(
+    :not([cui-areatype="toolbar"]),
+    [overflowedItem=true]
+  ) > toolbarbutton
 ):focus-visible {
   outline: var(--focus-outline);
   outline-offset: var(--focus-outline-inset);
@@ -1247,8 +1273,8 @@ panelview .toolbarbutton-1 {
     [overflowedItem=true]
   ) > toolbarbutton
 ):not([disabled]):hover {
-  color: inherit;
-  background-color: var(--panel-item-hover-bgcolor);
+  background-color: var(--menu-button-background-color-hover);
+  color: var(--menu-button-text-color-hover);
 }
 
 /* hovered-and-active styles for not-disabled buttons */
@@ -1261,8 +1287,8 @@ panelview .toolbarbutton-1 {
     [overflowedItem=true]
   ) > toolbarbutton
 ):not([disabled]):hover:active {
-  color: inherit;
-  background-color: var(--panel-item-active-bgcolor);
+  background-color: var(--menu-button-background-color-active);
+  color: var(--menu-button-text-color-active);
   box-shadow: 0 1px 0 hsla(210,4%,10%,.03) inset;
 }
 

@@ -18,6 +18,10 @@
   color: inherit;
   -moz-context-properties: fill, fill-opacity;
   fill: var(--toolbarbutton-icon-fill);
+
+  &:hover {
+    fill: var(--toolbarbutton-icon-fill-hover);
+  }
 }
 
 .toolbarbutton-animatable-box {

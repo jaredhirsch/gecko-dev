@@ -111,16 +111,17 @@
   --button-border-color-destructive-hover: var(--button-border-color-destructive);
   --button-border-color-destructive-active: var(--button-border-color-destructive);
 
-  --button-background-color-ghost: var(--button-background-color);
+  --button-background-color-ghost: transparent;
   --button-background-color-ghost-hover: var(--button-background-color-hover);
   --button-background-color-ghost-active: var(--button-background-color-active);
   --button-text-color-ghost: var(--button-text-color);
   --button-text-color-ghost-hover: var(--button-text-color-hover);
   --button-text-color-ghost-active: var(--button-text-color-active);
-  --button-border-color-ghost: var(--button-border-color);
+  --button-border-color-ghost: transparent;
   --button-border-color-ghost-hover: var(--button-border-color-hover);
   --button-border-color-ghost-active: var(--button-border-color-active);
 
+  /*** Menu ***/
   --menu-button-background-color: var(--button-background-color-ghost);
   --menu-button-background-color-hover: var(--button-background-color-ghost-hover);
   --menu-button-background-color-active: var(--button-background-color-ghost-active);
@@ -132,7 +133,21 @@
   --input-text-line-height: var(--button-line-height);
   --input-text-min-height: var(--button-min-height);
 
+  /** Color **/
+  --color-background-information: light-dark(var(--color-blue-05), var(--color-blue-80));
+  --color-background-success: light-dark(var(--color-green-05), var(--color-green-80));
+  --color-background-warning: light-dark(var(--color-yellow-05), var(--color-yellow-80));
+  --color-background-critical: light-dark(var(--color-red-05), var(--color-red-80));
+
+  /** Icon **/
+  --icon-color: light-dark(var(--color-gray-70), var(--color-gray-05));
+  --icon-color-information: light-dark(var(--color-blue-50), var(--color-blue-30));
+  --icon-color-success: light-dark(var(--color-green-50), var(--color-green-30));
+  --icon-color-warning: light-dark(var(--color-yellow-50), var(--color-yellow-30));
+  --icon-color-critical: light-dark(var(--color-red-50), var(--color-red-30));
+
   /** Text **/
+  --text-color: light-dark(var(--color-gray-100), var(--color-gray-05));
   --text-color-deemphasized: color-mix(in srgb, currentColor 60%, transparent);
 
   /** Size **/
@@ -146,38 +161,19 @@
   --space-large: 1em;
 }
 
-@media not (prefers-contrast) {
-  :root,
+@media (prefers-contrast) {
+  :root:not(:-moz-lwtheme),
   :host(.anonymous-content-host) {
     /* Button */
-    --button-background-color-ghost: transparent;
-    --button-border-color-ghost: transparent;
-
-    /* Color */
-    --color-background-information: light-dark(var(--color-blue-05), var(--color-blue-80));
-    --color-background-success: light-dark(var(--color-green-05), var(--color-green-80));
-    --color-background-warning: light-dark(var(--color-yellow-05), var(--color-yellow-80));
-    --color-background-critical: light-dark(var(--color-red-05), var(--color-red-80));
-
-    /* Icon */
-    --icon-color: light-dark(var(--color-gray-70), var(--color-gray-05));
-    --icon-color-information: light-dark(var(--color-blue-50), var(--color-blue-30));
-    --icon-color-success: light-dark(var(--color-green-50), var(--color-green-30));
-    --icon-color-warning: light-dark(var(--color-yellow-50), var(--color-yellow-30));
-    --icon-color-critical: light-dark(var(--color-red-50), var(--color-red-30));
-  }
-}
-
-@media (prefers-contrast) {
-  :root,
-  :host(.anonymous-content-host) {
     --button-border-color: var(--button-text-color);
+    --button-background-color-ghost: var(--button-background-color);
+    --button-border-color-ghost: var(--button-border-color);
   }
 }
 
 /* This should be @media (forced-colors), but that doesn't apply in browser chrome */
 @media (prefers-contrast) and (-moz-platform: windows) {
-  :root,
+  :root:not(:-moz-lwtheme),
   :host(.anonymous-content-host) {
     /* Border */
     --border-color: var(--text-color);
@@ -191,7 +187,6 @@
     --button-border-color-hover: var(--border-interactive-color-hover);
     --button-border-color-active: var(--border-interactive-color-active);
     --button-border-color-disabled: var(--border-interactive-color-disabled);
-
     --button-background-color: ButtonFace;
     --button-background-color-hover: SelectedItemText;
     --button-background-color-active: SelectedItemText;
@@ -212,7 +207,18 @@
     --button-text-color-primary-active: SelectedItemText;
     --button-text-color-primary-disabled: ButtonFace;
 
-    /* destructive button follows default/secondary button in HCM */
+    --button-border-color-destructive: var(--button-border-color-primary);
+    --button-border-color-destructive-hover: var(--button-border-color-primary-hover);
+    --button-border-color-destructive-active: var(--button-border-color-primary-active);
+    --button-border-color-destructive-disabled: var(--button-border-color-primary-disabled);
+    --button-background-color-destructive: var(--button-background-color-primary);
+    --button-background-color-destructive-hover: var(--button-background-color-primary-hover);
+    --button-background-color-destructive-active: var(--button-background-color-primary-active);
+    --button-background-color-destructive-disabled: var(--button-background-color-primary-disabled);
+    --button-text-color-destructive: var(--button-text-color-primary);
+    --button-text-color-destructive-hover: var(--button-text-color-primary-hover);
+    --button-text-color-destructive-active: var(--button-text-color-primary-active);
+    --button-text-color-destructive-disabled: var(--button-text-color-primary-disabled);
 
     --menu-button-background-color: var(--button-background-color-ghost);
     --menu-button-background-color-hover: ButtonText;

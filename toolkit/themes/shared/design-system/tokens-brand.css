@@ -61,7 +61,6 @@
     --color-canvas: light-dark(var(--color-white), var(--color-gray-90));
 
     /* Text */
-    --text-color: light-dark(var(--color-gray-100), var(--color-gray-05));
     --text-color-deemphasized: light-dark(
       color-mix(in srgb, currentColor 69%, transparent),
       color-mix(in srgb, currentColor 75%, transparent)
