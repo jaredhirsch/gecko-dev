@@ -832,6 +832,10 @@
           );
         case "moz-toggle":
           return import("chrome://global/content/elements/moz-toggle.mjs");
+        case "sidebar-launcher":
+          return import(
+            "chrome://global/content/elements/sidebar-launcher.mjs"
+          );
       }
       throw new Error(`Unknown custom element name (${name})`);
     }
