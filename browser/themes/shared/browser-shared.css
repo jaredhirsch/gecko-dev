@@ -1149,6 +1149,15 @@ panel toolbarseparator {
 
 /* Shopping sidebar */
 
+/* experimental splitter */
+
+.horizontal-sidebar-splitter {
+  display: inline-block;
+  border-top: 1px solid light-dark(rgb(240, 240, 244), rgb(82,82,94));
+  width: 100%;
+  cursor: ns-resize;
+}
+
 shopping-sidebar {
   /* `--shopping-sidebar-width` and `--shopping-sidebar-width-translate-x`
    * have the same default values, but they should still be separate vars
@@ -1162,6 +1171,9 @@ shopping-sidebar {
   width: var(--shopping-sidebar-width);
   visibility: visible;
   inset-inline-end: 0;
+
+  /* sidebar experiment: try half-height with a splitter */
+  height: 50%;
 
   &[closed] {
     transform: translateX(var(--shopping-sidebar-width-translate-x));
